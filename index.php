@@ -4,20 +4,24 @@
 <head>
 <meta charset="UTF-8">
 
+<link rel="stylesheet" type="text/css" media="screen" href=styles.css />
 <title>Movie review</title>
 
 </head>
 
 <body>
-<h1>Project site</h1>
-
+<img src="logo.png" width="50%" />
+<?php
+	include "menubar.php";
+	echo $menuBarNo;
+?>
 
 
 <?php
 // Connecting, selecting database
 $link = mysql_connect('mysql.stud.ntnu.no', 'tomeivin_webtec', 'Doge69')
     or die('Could not connect: ' . mysql_error());
-echo 'Connected successfully';
+/*echo 'Connected successfully';*/
 mysql_select_db('test') or die('Could not select database');
 
 // Performing SQL query
