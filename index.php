@@ -10,10 +10,10 @@
 </head>
 
 <body>
-<img src="logo.png" width="50%" />
+<img src="logo.png" width="50%" alt="logo"/>
 <?php
 	include "menubar.php";
-	echo $menuBarNo;
+	echo generate(); 
 ?>
 
 
