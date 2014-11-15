@@ -11,12 +11,12 @@ $menuBarNo=  "	<ul id=\"nav\">
 
 		<li><a>Action</a>
 			<ul>
-				<li><a href=\"inception.php\">Inception</a></li>
+				<li><a href=\"inception.php?title=inception\">Inception</a></li>
 			</ul></li>
 		<li><a>Drama</a>
 		
 				<ul>
-				<li><a href=\"The Room.php\">The Room</a></li>
+				<li><a href=\"movie_xml.php?title=The+Room\">The Room</a></li>
 				</ul></li>
 
 		<li><a>Thriller</a>
