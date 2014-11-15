@@ -36,7 +36,7 @@ function generate() {
 					while ($line2 = mysql_fetch_array($result2, MYSQL_ASSOC)) {
 
 						// write php file to send to here
-						$string .= "\t<li><a href=\"movie_xml.php?title=";
+						$string .= "\t<li><a href=\"form/movie_xml.php?title=";
 						foreach ($line2 as $col_value2) {
 							$string .= $col_value2 . "\">";
 							$string .= $col_value2;
