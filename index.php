@@ -19,10 +19,10 @@
 
 <?php
 // Connecting, selecting database
-$link = mysql_connect('mysql.stud.ntnu.no', 'tomeivin_webtec', 'Doge69')
+$link = mysql_connect('mysql.stud.ntnu.no', 'tomeivin_web', '1337Doge')
     or die('Could not connect: ' . mysql_error());
 /*echo 'Connected successfully';*/
-mysql_select_db('test') or die('Could not select database');
+mysql_select_db('tomeivin_review') or die('Could not select database');
 
 // Performing SQL query
 $query = 'SELECT * FROM review';

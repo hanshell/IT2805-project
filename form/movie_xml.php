@@ -1,17 +1,17 @@
 <?php
 	// Connecting, selecting database
-	$link = mysql_connect('mysql.stud.ntnu.no', 'tomeivin_webtec', 'Doge69')
+	$link = mysql_connect('mysql.stud.ntnu.no', 'tomeivin_web', '1337Doge')
 	    or die('Could not connect: ' . mysql_error());
 	/*echo 'Connected successfully';*/
-	mysql_select_db('test') 
+	mysql_select_db('tomeivin_review') 
 		or die('Could not select database');
 
 	// Performing SQL query
 
 
-//	$movie_title=$_GET['title'];
+	$movie_title=$_GET['title'];
 
-	$movie_title="The Room";
+	//$movie_title="The Room";
 
 
 	$query="SELECT * FROM movie WHERE title='" . $movie_title . "'"; 

@@ -1,8 +1,8 @@
 <?php 
 	$servername = "mysql.stud.ntnu.no";
-	$username = "tomeivin_webtec";
-	$password = "Doge69";
-	$dbname = "test";
+	$username = "tomeivin_web";
+	$password = "1337Doge";
+	$dbname = "tomeivin_review";
 
 	$connection = new mysqli($servername, $username, $password, $test);
 	if($connection->connect_error){
@@ -19,7 +19,7 @@
 
 
 
-	$sql="INSERT INTO test.review (movie_title, rating, review, nick) 
+	$sql="INSERT INTO tomeivin_review.review (movie_title, rating, review, nick) 
 		VALUES ('inception', '" . $rating . "', '" . $review ."', '" . $nick . "')"; 
 	if($connection->query($sql)===TRUE){
 		echo "RECORD CREATED SUCCESSFULLY";
