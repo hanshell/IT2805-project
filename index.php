@@ -5,6 +5,12 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
+<style>
+#nav #home{
+	background-color: #ddd;
+	color: #333;
+}
+</style>
 <title>Movie review</title>
 
 </head>
