@@ -1,12 +1,11 @@
 @charset "utf-8";
 
-body
+html, body
 {
 	font-family: calibri, Geneva, sans-serif;
-
-	
+	padding:0;
+	height:100%;
 }
-
 
 #nav,#nav ul {
 	display:block;
@@ -19,13 +18,13 @@ body
 	font-family: Tahoma, Geneva, sans-serif;
 	list-style: none;
 	text-decoration: none;
-	
-	
+
+
 }
 #nav ul li a {
 	border-right: 1px solid #fff;
 	border-top: 1px solid #fff;
-	
+
 }
 
 
@@ -65,5 +64,31 @@ body
 
 
 * {
-margin: 0;
+	margin: 0;
+}
+
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+#container {
+    padding:10px;
+	padding-bottom:80px;   /* Height of the footer element */
+}
+
+#author {
+    margin-right: auto;
+    margin-left: auto;
+    border-top: thin solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: lightblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
