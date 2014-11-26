@@ -2,8 +2,8 @@
 
 function generate() {
 	$string = "<ul id=\"nav\">
-			<li><a href=\"index.php\">Home</a></li>
-
+			<li><a href=\"index.php\" id=\"home\">Home</a></li>
+			<li><a href=\"toplist.php\" id=\"topList\">Top List</a></li>
 			";
 
 
@@ -36,7 +36,7 @@ function generate() {
 					while ($line2 = mysql_fetch_array($result2, MYSQL_ASSOC)) {
 
 						// write php file to send to here
-						$string .= "\t<li><a href=\"form/movie_xml.php?title=";
+						$string .= "\t<li><a href=\"movie_html.php?title=";
 						foreach ($line2 as $col_value2) {
 							$string .= $col_value2 . "\">";
 							$string .= $col_value2;
@@ -66,7 +66,7 @@ function generate() {
 
 
 			$string .= "
-					<li><a href=\"sitemap.php\">Sitemap</a></li>
+					<li><a href=\"sitemap.php\" id=\"sitemap\">Sitemap</a></li>
 
 					</ul>";
 					return $string;
