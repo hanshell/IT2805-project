@@ -74,7 +74,11 @@ html, body
 
 #container {
     padding:10px;
+    padding-top: 80px;
 	padding-bottom:80px;   /* Height of the footer element */
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #author {
