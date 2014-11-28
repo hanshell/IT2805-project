@@ -34,7 +34,17 @@
 		    echo "\t<tr>\n";
 		    echo "<td>" . $counter . "</td>";
 		    foreach ($line as $col_value) {
-		        echo "\t\t<td>$col_value</td>\n";
+		      if(!($col_value == $line["avg(rating)"])){
+   				echo "\t\t<td>$col_value";
+                echo "</td>\n";
+		        }
+		        else{
+            		 echo "\t\t<td>";
+            		 echo substr($col_value, 0, 3);
+                     echo "/5.0";
+                     echo "</td>\n";
+            		        }
+
 		    }
 		    $counter++;
 		    echo "\t</tr>\n";
