@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div id="wrapper">
 <img src="logo.png" width="50%" alt="logo"/>
 
 <!-- navigation bar -->
@@ -17,7 +18,7 @@
 	include "menubar.php";
 	echo generate(); 
 ?>
-
+<div id="container">
 <!-- content -->
 <?php
 
@@ -63,9 +64,9 @@ mysql_close($link);
 
 		<h3>Rating submission</h3>
 		<form action="form/form_action.php" method="POST" id="review_form">
-			Username: <input type="text" name="username"><br>
+			Username: <input type="text" name="username" required><br>
 			Movie rating:
-			<input type="radio" name="rating" value="1">1
+			<input type="radio" name="rating" value="1" checked="checked">1
 			<input type="radio" name="rating" value="2">2
 			<input type="radio" name="rating" value="3">3
 			<input type="radio" name="rating" value="4">4
@@ -75,7 +76,7 @@ mysql_close($link);
 			<br>
 			Review:
 			<br>
-			<textarea form="review_form" onfocus="clearContents(this);"cols="40" rows="10" name="reviewText">write your review here...</textarea><br>
+			<textarea form="review_form" onfocus="clearContents(this);"cols="40" rows="10" name="reviewText" required>write your review here...</textarea><br>
 			<input type="submit" id="movieSubmit" value="Submit review">
 
 			<input type="hidden" name="title" value="<?php
@@ -84,7 +85,12 @@ mysql_close($link);
 
 		</form>
 
+</div>
 
+<div id="author">
+        Author: Hans Melby, Luan Tran and Tom Glover
+</div>
+</div>
 </body>
 
 </html>
