@@ -57,11 +57,16 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
         $previous = $line["title"];
         }
         if($previous !== null){
-         echo "<a href=\"movie_html.php?title=". $previous . "\"> PREVIOUS </a>" ;
+         echo "<a id=\"previous\" href=\"movie_html.php?title=". $previous . "\">PREVIOUS</a>" ;
         }
         if ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
-        echo "<a href=\"movie_html.php?title=". $line["title"] . "\"> NEXT </a>" ;
+        echo "<a id=\"next\" href=\"movie_html.php?title=". $line["title"] . "\">NEXT</a>" ;
+
+
+
+
+
 
  }
 
@@ -72,6 +77,11 @@ mysql_free_result($result);
 
 // Closing connection
 mysql_close($link);
+
+    echo "<br/>\n";
+
+    echo "<a id=\"review\" href=\"review_html.php?title=". $movie_title . "\">REVIEWS</a>";
+
 ?>
 
 
