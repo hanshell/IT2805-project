@@ -7,6 +7,10 @@ html, body
 	height:100%;
 }
 
+#logo {
+	padding: 5px;
+}
+
 #nav,#nav ul {
 	display:block;
 	padding-left: 10%;
@@ -76,23 +80,49 @@ html, body
     padding:10px;
     padding-top: 80px;
 	padding-bottom:80px;   /* Height of the footer element */
-	width: 90%;
+	width: 600px;
 	margin-right: auto;
 	margin-left: auto;
 }
+#toplistTable {
+	padding: 10px;
+	background-color: lightblue;
+}
 
+#toplistTable #toplistHeader {
+	font-weight: bold;
+	font-size: 16px;
+	background-color: lightgrey;
+}
 
+#toplistTable tr:nth-child(even) {
+	background-color: lightyellow;
+}
+
+#toplistTable tr:nth-child(odd) {
+   background-color: lightblue;
+}
+
+#image {
+	width: 50%;
+	float: left;
+}
+#text{
+	width: 45%;
+	float: right;
+}
 
 #author {
     margin-right: auto;
     margin-left: auto;
     border-top: thin solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 0px;
     margin-top: 30px;
     text-align: center;
-    background-color: lightblue;
+    background-color: #333;
+    color: white;
     position: absolute;
     bottom: 0;
     width: 100%;

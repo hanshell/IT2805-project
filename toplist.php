@@ -28,7 +28,7 @@
 		$result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 		// Printing results in HTML
-		echo "<table>\n";
+		echo "<table id=\"toplistTable\">\n";
 		$counter = 1;
 
 		echo "<tr id=\"toplistHeader\">\n";
