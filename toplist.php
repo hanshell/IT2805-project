@@ -30,6 +30,11 @@
 		// Printing results in HTML
 		echo "<table>\n";
 		$counter = 1;
+
+		echo "<tr id=\"toplistHeader\">\n";
+		echo "<td>Rank</td><td>Title</td><td>Rating</td>\n";
+		echo "</tr>\n";
+
 		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		    echo "\t<tr>\n";
 		    echo "<td>" . $counter . "</td>";
@@ -43,8 +48,7 @@
             		 echo substr($col_value, 0, 3);
                      echo "/5.0";
                      echo "</td>\n";
-            		        }
-
+            	}
 		    }
 		    $counter++;
 		    echo "\t</tr>\n";
