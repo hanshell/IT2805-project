@@ -6,10 +6,44 @@
 
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
 <title>Movie review</title>
+<style>
+#linear{
+width:100%;
+}
+#previous, #next, #review_button {
+	float: left;
+	background-color: #333;
+    color: white;
+    font-family: Tahoma, Geneva, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px;
+    display: inline;
+    min-width:200px;
+    border-right: 1px solid #fff;
 
+}
+#next {
+margin-left: auto;
+/*float: right;/**/
+text-align: right;
+border-right: 0px;
+}
+#linear a:hover{
+	background-color: #ddd;
+	color: #333;
+}
+#review_button {
+	text-align: center;
+}
+
+
+
+</style>
 </head>
 
 <body>
+<div id="wrapper">
 <img src="logo.png" width="50%" alt="logo"/>
 
 <!-- navigation bar -->
@@ -19,6 +53,7 @@
 ?>
 
 <!-- content -->
+<div id="container">
 <?php
 
 $movie_title=$_GET['title'];
@@ -56,19 +91,20 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
         }
         $previous = $line["title"];
         }
+
+        echo "<div id=\"linear\">";
+
         if($previous !== null){
-         echo "<a id=\"previous\" href=\"movie_html.php?title=". $previous . "\">PREVIOUS</a>" ;
+        echo "\n<a id=\"previous\" href=\"movie_html.php?title=". $previous . "\"><--Previous</a>\n" ;
         }
+
+            echo "<a id=\"review_button\" href=\"review_html.php?title=". $movie_title . "\">Reviews</a>";
+
         if ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
-        echo "<a id=\"next\" href=\"movie_html.php?title=". $line["title"] . "\">NEXT</a>" ;
-
-
-
-
-
-
- }
+        echo "<a id=\"next\" href=\"movie_html.php?title=". $line["title"] . "\">Next--></a>" ;
+ 		}
+		echo "</div>";
 
 
 
@@ -78,14 +114,15 @@ mysql_free_result($result);
 // Closing connection
 mysql_close($link);
 
-    echo "<br/>\n";
-
-    echo "<a id=\"review\" href=\"review_html.php?title=". $movie_title . "\">REVIEWS</a>";
 
 ?>
 
+</div>
 
-
+<div id="author">
+        Author: Hans Melby, Luan Tran and Tom Glover
+</div>
+</div>
 </body>
 
 </html>
