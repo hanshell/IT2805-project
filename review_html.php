@@ -3,7 +3,6 @@
 
 <head>
 <meta charset="UTF-8">
-<script src="form/form.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
 <title>Movie review</title>
 
@@ -64,7 +63,7 @@ mysql_close($link);
 
 		<h3>Rating submission</h3>
 		<form action="form/form_action.php" method="POST" id="review_form">
-			Username: <input type="text" name="username" required><br>
+			Username: <input type="text" name="username" id="username" required maxlength="30"><br>
 			Movie rating:
 			<input type="radio" name="rating" value="1" checked="checked">1
 			<input type="radio" name="rating" value="2">2
@@ -76,8 +75,8 @@ mysql_close($link);
 			<br>
 			Review:
 			<br>
-			<textarea form="review_form" onfocus="clearContents(this);"cols="40" rows="10" name="reviewText" required>write your review here...</textarea><br>
-			<input type="submit" id="movieSubmit" value="Submit review">
+			<textarea form="review_form" onfocus="clearContents(this);"cols="40" rows="10" name="reviewText" id="reviewText" required maxlength="255">write your review here...</textarea><br>
+			<input type="submit" id="movieSubmit" value="Submit review" disabled>
 
 			<input type="hidden" name="title" value="<?php
 			echo $movie_title;
@@ -91,6 +90,7 @@ mysql_close($link);
         Author: Hans Melby, Luan Tran and Tom Glover
 </div>
 </div>
+<script src="form/form.js"></script>
 </body>
 
 </html>
