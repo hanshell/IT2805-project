@@ -19,7 +19,7 @@ width:100%;
     text-decoration: none;
     padding: 5px;
     display: inline;
-    min-width:200px;
+    min-width:186px;
     border-right: 1px solid #fff;
 
 }
@@ -84,6 +84,7 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
 
 		if($line["title"] == $movie_title){
 		   echo"<h1>" . $line["title"]. "</h1>";
+		   echo "<a id=\"xml\" href=\"form/movie_xml.php?title=". $line["title"] . "\">Get as XML</a>" ;
 		   echo "<h3> Genre: " .$line["genre"] . "</h3>";
 		   echo "<h3> Director: " .$line["director"] . "</h3>";
 		   echo "Description: <br/>" .$line["description"] . "<br/>" ;
