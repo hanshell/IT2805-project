@@ -11,7 +11,7 @@
 
 <body>
 <div id="wrapper">
-<img src="logo.png" width="50%" alt="logo"/>
+<img id="logo" src="logo.png" alt="logo" hspace="10"/>
 <?php
 	include "menubar.php";
 	echo generate();

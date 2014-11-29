@@ -48,7 +48,7 @@
 </div>
 
 <div id="author">
-        Author: Luan Tran
+        Author: Hans Melby, Luan Tran and Tom Glover
 </div>
 </div>
 </body>

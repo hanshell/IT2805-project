@@ -44,7 +44,7 @@ border-right: 0px;
 
 <body>
 <div id="wrapper">
-<img src="logo.png" width="50%" alt="logo"/>
+<img id="logo" src="logo.png" alt="logo" hspace="10"/>
 
 <!-- navigation bar -->
 <?php

@@ -9,7 +9,7 @@
 
 <body>
 <div id="wrapper">
-	<img src="logo.png" width="50%" alt="logo"/>
+	<img id="logo" src="logo.png" alt="logo" hspace="10"/>
 	<?php
 		include "menubar.php";
 		echo generate(); 
@@ -64,7 +64,7 @@
 	</div>
 
 	<div id="author">
-	        Author: Luan Tran
+	        Author: Hans Melby, Luan Tran and Tom Glover
 	</div>
 </div>
 </body>
