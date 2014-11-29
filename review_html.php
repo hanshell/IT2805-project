@@ -33,14 +33,14 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
 
 	$query="SELECT * FROM review WHERE movie_title='" . $movie_title . "'";
 	$result = mysql_query($query) or die('Query failed: ' . mysql_error());
-    echo "<br/>";
+    echo "<h1>Reviews for " . $movie_title . "</h1>";
 		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
-		   echo "<h3 id=\"review\"> Review: <br/>" .$line["review"] . "</h3>";
-		   echo"<h3 id=\"nick\"> written by: " . $line["nick"]. "</h3>";
-		   echo "<h3 id=\"rating\"> \t Rating: " .$line["rating"] . "</h3>";
-
-		   echo "<hr>";
+			echo "<br>";
+			echo"<p id=\"nick\"> <strong>Author:</strong> " . $line["nick"]. "</p>";
+			echo "<p id=\"rating\"> \t Rating: " .$line["rating"] . "</p>";
+			echo "<p id=\"review\"> Review: <br/>" .$line["review"] . "</p>";
+			echo "<hr>";
         }
 
 
