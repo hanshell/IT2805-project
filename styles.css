@@ -11,6 +11,11 @@ html, body
 	padding: 5px;
 }
 
+h1 {
+  position: relative;
+  left: 40px;
+}
+
 #nav,#nav ul {
 	display:block;
 	padding-left: 10%;
@@ -87,6 +92,11 @@ html, body
 #toplistTable {
 	padding: 10px;
 	background-color: lightblue;
+}
+
+#toplistTable td {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #toplistTable #toplistHeader {
