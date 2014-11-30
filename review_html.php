@@ -38,7 +38,7 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
 			echo "<br>";
 			echo"<p id=\"nick\"> <span>Author:</span> " . $line["nick"]. "</p>";
 			echo "<p id=\"rating\"> \t <span>Rating:</span> " .$line["rating"] . "</p>";
-			echo "<canvas id=\"canvas\" width=\"160\" height=\"32\">Your browser does not support the canvas telement.</canvas>";
+			echo "<div name=\"stars\">". $line["rating"] ."</div>\n";
 			echo "<p id=\"review\"> <span>Review:</span> <br/>" .$line["review"] . "</p>";
 			echo "<hr>";
         }
@@ -95,19 +95,22 @@ mysql_close($link);
 
 <script>
 	onload = function(){
-		console.log("sss");
+				
 		
-		var img = new Image(32, 32);
-		var can = document.getElementById("canvas");
-		var ctx = can.getContext("2d");
-		img.src="stars.png";
-		img.onload = function() {
-			ctx.drawImage(img, 0, 0);
+		var div = document.getElementsByName("stars");
+		for(j = 0; j<div.length; j++){
+			var nr = parseInt(div[j].innerHTML);
+			div[j].innerHTML="";
+			for(i = 0; i< nr ; i++){
+				var img = new Image(32, 32);
+				img.src="stars.png";
+				img.setAttribute("alt", "Star");
+				div[j].appendChild(img);
+				//console.log(i);
+			}
+
 		}
 
-		function drawStars() {
-			ctx.drawImage(img, 0, 0);
-		}
 	}
 </script>
 </body>
