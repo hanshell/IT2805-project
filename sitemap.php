@@ -7,6 +7,12 @@
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
 <title>Sitemap</title>
 
+<style>
+	#nav #sitemap{
+	background-color: #ddd;
+	color: #333;
+}
+</style>
 </head>
 
 <body>
