@@ -18,7 +18,7 @@
 
 <body>
 <div id="wrapper">
-<img id="logo" src="logo.png" alt="logo" hspace="10"/>
+<img id="logo" src="img/logo.png" alt="logo" hspace="10"/>
 
 <?php
 	include "menubar.php";

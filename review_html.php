@@ -10,7 +10,7 @@
 
 <body>
 <div id="wrapper">
-<img id="logo" src="logo.png" alt="logo" hspace="10"/>
+<img id="logo" src="img/logo.png" alt="logo" hspace="10"/>
 
 <!-- navigation bar -->
 <?php
@@ -107,7 +107,7 @@ mysql_close($link);
 			div[j].innerHTML="";
 			for(i = 0; i< nr ; i++){
 				var img = new Image(32, 32);
-				img.src="stars.png";
+				img.src="img/stars.png";
 				img.setAttribute("alt", "Star");
 				div[j].appendChild(img);
 				//console.log(i);

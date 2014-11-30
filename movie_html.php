@@ -45,7 +45,7 @@ width:100%;
 
 <body>
 <div id="wrapper">
-<img id="logo" src="logo.png" alt="logo" hspace="10"/>
+<img id="logo" src="img/logo.png" alt="logo" hspace="10"/>
 
 <!-- navigation bar -->
 <?php
