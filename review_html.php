@@ -35,6 +35,7 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
     echo "<h1>Reviews for " . $movie_title . "</h1>";
 		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
+			//print one review
 			echo "<br>";
 			echo"<p id=\"nick\"> <span>Author:</span> " . $line["nick"]. "</p>";
 			echo "<p id=\"rating\"> \t <span>Rating:</span> " .$line["rating"] . "</p>";
@@ -61,7 +62,8 @@ mysql_close($link);
 
 
 ?>
-
+		<!-- Form for adding a review-->
+		</br>
 		<h3>Rating submission</h3>
 		<form action="form/form_action.php" method="POST" id="review_form">
 			Username: <input type="text" name="username" id="username" required maxlength="30"><br>
@@ -91,13 +93,15 @@ mysql_close($link);
         Author: Hans Melby, Luan Tran and Tom Glover
 </div>
 </div>
+
+
 <script src="form/form.js"></script>
 
+<!-- to replace the review number with images -->
 <script>
 	onload = function(){
-				
-		
 		var div = document.getElementsByName("stars");
+		//goes through all elements called stars and aquires the number of stars to print and removes the value from the page.
 		for(j = 0; j<div.length; j++){
 			var nr = parseInt(div[j].innerHTML);
 			div[j].innerHTML="";

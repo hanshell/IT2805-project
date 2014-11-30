@@ -5,7 +5,11 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
-<title>Movie review</title>
+<title>
+<?php
+echo $_GET['title'];
+?>
+</title>
 <style>
 #linear{
 width:100%;
@@ -25,9 +29,9 @@ width:100%;
 
 }
 #next {
-margin-left: auto;
-text-align: right;
-border-right: 0px;
+	margin-left: auto;
+	text-align: right;
+	border-right: 0px;
 }
 #linear a:hover{
 	background-color: #ddd;
@@ -36,9 +40,6 @@ border-right: 0px;
 #review_button {
 	text-align: center;
 }
-
-
-
 </style>
 </head>
 
@@ -92,7 +93,7 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
         }
         $previous = $line["title"];
         }
-
+		//creating the linear navi bar and the link to reviews.
         echo "</br><div id=\"linear\">";
 
         if($previous !== null){
