@@ -24,7 +24,7 @@ CSS        - For styling (again, self-explanatory)
 
 JavaScript - Used for form validation such as setting allowed characters 
 (to avoid database injections) and making sure each form field is filled out 
-before submission
+before submission. A javascript function is called onload in reveiw_html.php. This function inserts a sum of stars equal to rating of the given review. 
 
 phpMyAdmin - Used for database administration to create a database with
 tables for storing information about movies and reviews (relevant information 
