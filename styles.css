@@ -12,8 +12,9 @@ html, body
 }
 
 h1 {
-  position: relative;
-  left: 40px;
+/*position: relative;
+  left: 40px;*/
+margin-left: 40px;
 }
 
 #nav,#nav ul {

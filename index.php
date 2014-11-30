@@ -5,19 +5,21 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" media="screen" href=styles.css />
+
 <style>
 #nav #home{
 	background-color: #ddd;
 	color: #333;
 }
 </style>
-<title>Movie review</title>
+<title>Fresh Tomatoes</title>
 
 </head>
 
 <body>
 <div id="wrapper">
 <img id="logo" src="logo.png" alt="logo" hspace="10"/>
+
 <?php
 	include "menubar.php";
 	echo generate(); 

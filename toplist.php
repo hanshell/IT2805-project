@@ -5,6 +5,13 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" media="screen" href=styles.css />
 	<title>Top list</title>
+
+	<style>
+	#nav #topList{
+	background-color: #ddd;
+	color: #333;
+}
+</style>
 </head>
 
 <body>
