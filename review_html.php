@@ -36,9 +36,10 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
 		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
 			echo "<br>";
-			echo"<p id=\"nick\"> <strong>Author:</strong> " . $line["nick"]. "</p>";
-			echo "<p id=\"rating\"> \t Rating: " .$line["rating"] . "</p>";
-			echo "<p id=\"review\"> Review: <br/>" .$line["review"] . "</p>";
+			echo"<p id=\"nick\"> <span>Author:</span> " . $line["nick"]. "</p>";
+			echo "<p id=\"rating\"> \t <span>Rating:</span> " .$line["rating"] . "</p>";
+			echo "<canvas id=\"canvas\" width=\"160\" height=\"32\">Your browser does not support the canvas telement.</canvas>";
+			echo "<p id=\"review\"> <span>Review:</span> <br/>" .$line["review"] . "</p>";
 			echo "<hr>";
         }
 
@@ -91,6 +92,24 @@ mysql_close($link);
 </div>
 </div>
 <script src="form/form.js"></script>
+
+<script>
+	onload = function(){
+		console.log("sss");
+		
+		var img = new Image(32, 32);
+		var can = document.getElementById("canvas");
+		var ctx = can.getContext("2d");
+		img.src="stars.png";
+		img.onload = function() {
+			ctx.drawImage(img, 0, 0);
+		}
+
+		function drawStars() {
+			ctx.drawImage(img, 0, 0);
+		}
+	}
+</script>
 </body>
 
 </html>
