@@ -11,11 +11,12 @@
 width:100%;
 }
 #previous, #next, #review_button {
-	float: left;
-	background-color: #333;
+    float: left;
+    background-color: #333;
     color: white;
     font-family: Tahoma, Geneva, sans-serif;
     list-style: none;
+    height: 19px;
     text-decoration: none;
     padding: 5px;
     display: inline;
@@ -25,7 +26,6 @@ width:100%;
 }
 #next {
 margin-left: auto;
-/*float: right;/**/
 text-align: right;
 border-right: 0px;
 }
@@ -93,11 +93,14 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
         $previous = $line["title"];
         }
 
-        echo "<div id=\"linear\">";
+        echo "</br><div id=\"linear\">";
 
         if($previous !== null){
         echo "\n<a id=\"previous\" href=\"movie_html.php?title=". $previous . "\"><--Previous</a>\n" ;
         }
+	else{
+	echo "<div id=\"previous\"> </div>\n";
+	} 
 
             echo "<a id=\"review_button\" href=\"review_html.php?title=". $movie_title . "\">Reviews</a>";
 
@@ -105,6 +108,9 @@ mysql_select_db('tomeivin_review') or die('Could not select database');
 
         echo "<a id=\"next\" href=\"movie_html.php?title=". $line["title"] . "\">Next--></a>" ;
  		}
+	else{
+	echo "<div id=\"next\"> </div>\n";
+	}
 		echo "</div>";
 
 
